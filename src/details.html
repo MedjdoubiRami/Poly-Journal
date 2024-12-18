@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page de détails</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/x-icon" href="./assets/favico.ico" />
+  <script src="assets/js/details.js" type="module" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1><a href="index.html" style="text-decoration: none;">Système de journalisation</a></h1>
+  </header>
+
+  <main>
+    <section id="stats-container">
+      <!-- TODO : Générer ces statistiques dynamiquement -->
+    </section>
+    <section id="search-container">
+      <form id="search-form">
+        <input type="text" id="search-input" placeholder="Rechercher dans un message">
+        <button type="submit" id="search-button"><i class="fa fa-search"></i></button>
+      </form>
+    </section>
+    <section id="logs-details-container">
+      <section id="logs-filters">
+        <h2>Filtrer par : </h2>
+        <div>
+          <div id="sort-order-radios">
+            <h4>Date : </h4>
+            <label><input type="radio" name="date-sort" id="date-asc">Ascendant</label>
+            <label><input type="radio" name="date-sort" id="date-des">Descendant</label>
+          </div>
+          <div id="level-checkbox">
+            <h4>Niveaux : </h4>
+            <section class="rounder-border">
+              <label><input id="debug-input" type="checkbox">Debug</label>
+              <label><input id="info-input" type="checkbox">Info</label>
+              <label><input id="warn-input" type="checkbox">Warning</label>
+              <label><input id="error-input" type="checkbox">Error</label>
+            </section>
+          </div>
+          <div id="button-container">
+            <h4>Session : </h4>
+            <button id="session-group-btn">Grouper</button>
+          </div>
+          <button id="filter-reset-btn">Réinitialiser</button>
+        </div>
+      </section>
+      <section id="log-display-container">
+        <!-- TODO : Générer le contenu dynamiquement -->
+      </section>
+    </section>
+  </main>
+</body>
+
+</html>
